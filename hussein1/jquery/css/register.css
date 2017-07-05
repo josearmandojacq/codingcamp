@@ -1,0 +1,15 @@
+h1{
+	color:red;
+}
+
+
+#reg input {
+	width:300px;
+	height:50px;
+	border:1px solid black;
+}
+
+#butt {
+	width:100px;
+	height:30px;
+}
