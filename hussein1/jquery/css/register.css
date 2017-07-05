@@ -1,15 +1,48 @@
+body {
+	background-image: url("../giphy.gif");
+	background-repeat: no-repeat;
+	background-size: cover;
+	
+}
+
+
+#container{
+	width:900px;
+	margin:0 auto;
+	text-align:center;
+}
+
 h1{
 	color:red;
+	text-align:center;
+}
+#first-email,#conf-email,#first-sec-name,#family-sec-name,{
+	text-align:center;
 }
 
-
-#reg input {
-	width:300px;
-	height:50px;
+#txtEmail,#txtEmailCon {
+	width:30%;
+	height:30px;
 	border:1px solid black;
+
+}
+label {
+	color:purple;
+	font-size:30px;
+
+}
+#first-sec-name{
+float:left;
+width:50%;
+
+}
+#family-sec-name{
+float:right;
+width:50%;
 }
 
-#butt {
-	width:100px;
+#firstName, #familyName {
+	width:80%;
 	height:30px;
 }
+

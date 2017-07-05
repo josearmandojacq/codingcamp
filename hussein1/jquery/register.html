@@ -7,14 +7,33 @@
 
 	<body>
 		<h1>Register Now !</h1>
-
-		<form id="reg">
-			<p>Email</p>
-			<input id = "txtEmail" type="text" name="Email" placeholder="example@devugees.org">
-			<button id= "btnValidate">submit</button>
-			<div id="text"></div>
-		</form>
-		
+		<div id="container">
+			<form id="reg">
+				<div id ="first-email">
+					<label for = "txtEmail" id = "emailLab">Email</label><br>
+					<input id = "txtEmail" type="text" name="email" placeholder="example@devugees.org">
+					<p id="text"></p>
+				</div>
+				<div id="conf-email">	
+					<label for = "txtEmailCon" id = "emailConLab">Email confirmation</label><br>
+					<input id = "txtEmailCon" type="text" name="email" placeholder="your email again please">
+					<p id="textCon"></p>
+				</div>
+				<div id = "first-sec-name">
+					<label for = "firstName" id = "firstNameLab">First Name</label><br>	
+					<input id = "firstName" type="text" name="first-name" placeholder="First Name">
+				</div>
+				<div id = "family-sec-name">
+					<label for = "familyName" id = "familyNameLab">Family Name</label><br>
+					<input id = "familyName" type="text" name="family-name" placeholder="Family Name">	
+				</div>	
+				<div id="check-btn">
+				<input id="check-input" type = "checkbox" name = "checkbox">accept term and condition
+				<div id="regBtn">
+				<button id = "submitBtn" type="submit" disabled>register</button>
+				</div>
+			</form>
+		</div>
 		<script src ="scripts/jquery-3.2.1.min.js"></script>
 		<script src ="scripts/register.js"></script>
 	</body>
