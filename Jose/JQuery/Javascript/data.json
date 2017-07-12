@@ -1,0 +1,12 @@
+{
+  "name":{
+        "first": "Jose",
+        "last": "Castillo"
+  },
+  "hobbies":[
+    "programming",
+    "alcohol",
+    "watch movies"
+  ],
+  "birthday": 1992
+}

@@ -1,0 +1,53 @@
+button{
+  position: relative;
+  width: 50px;
+  height: 50px;
+
+  animation-fill-mode: forwards;
+}
+
+@keyframes bottomToRight{
+  0%{
+    top: 0;
+    left: 0;
+
+  }
+  40%{
+    top: 300px;
+    left: 0px;
+  }
+
+  100%{
+    top: 300px;
+    left: 200px;
+
+  }
+}
+@keyframes upToLeft{
+  0%{
+    top: 300px;
+    left: 200px;
+    width: 100px;
+    height: 100px;
+  }
+  50%{
+    top: 0;
+    left: 200px;
+  }
+  100%{
+    top: 0;
+    left: 0;
+  }
+}
+
+.animate{
+  transition-property: transform;
+  animation-name: bottomToRight;
+  animation-duration: 5s;
+
+}
+.animate1{
+  transition-property: transform;
+  animation-name: upToLeft;
+  animation-duration: 5s;
+}

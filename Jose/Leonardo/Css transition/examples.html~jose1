@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Trying Css transition</title>
+		<style>
+			.change:hover{
+				background-color: #ff00ff;
+				color: white;			}
+			.change{
+				background-color: rgb(160, 82, 45);
+				border: 2px solid black;
+			}
+			#father:hover #son{
+				background-color: green;
+			}
+			.blackbox{
+				width: 500px;
+				height: 500px;
+				position: relative;
+				background-color: black;
+			}
+			#son{
+				position: absolute;
+				left: 200px;
+				top: 200px;
+				background-color: red;
+				color: white;
+			}
+			a:visited{
+				color: red;
+			}
+			a:hover{
+				color: blue;
+				transition-duration: 2s;
+			}
+
+			#brother1{
+				background-color: black;
+				opacity: 0.8;
+				width: 500px;
+				height: 500px;
+				position: relative;
+				float: left;
+				clear: right;
+
+			}
+			#brother2{
+				background-color: red;
+				opacity: 0.2;
+				width: 500px;
+				height: 500px;
+				position: relative;
+				float: left;
+				clear: right;
+
+
+			}
+			#brother2:hover{
+				transform: rotate(-30deg);
+			}
+			#brother1:hover{
+				transform: rotate(-30deg);
+			}
+			#div1:hover{
+				transform: scale(78) rotate(-30deg);
+
+			}
+			#div2:hover{
+				transform: scale(2, 0.5) rotate(-30deg) translate(50px, 50px);
+
+			}
+			#div1{
+				clear: left;
+
+				color: red;
+				width: 40px;
+				height: 20px;
+				margin: 30px 80px;
+
+			}
+			#div2{
+				width: 80px;
+				height: 40px;
+				margin: 30px 80px;
+			}
+            @keyframes slide{
+                0%{
+                    left: 0;
+                    top: 0;
+                }
+                50%{
+                    left: 244px;
+                    top: 100px;
+                }
+                100%{
+                    left: 488px;
+                    top: 0;
+                }
+            }
+
+			#div3{
+				background-color: red;
+				width: 200px;
+				height: 200px;
+				transition-property: transform;
+                animation-name: slide;                                                          /*animation*/
+                animation-duration: 5s;
+                animation-iteration-count: infinite;
+                animation-direction: alternate;
+                animation-timing-function: linear;
+                position: relative;
+
+			}
+			#div3:hover{
+				transform: rotate(-20deg);
+				background-color: blue;
+				transition-duration: 6s;
+
+			}
+			.comun{
+				width: 100px;
+				height: 100px;
+				background-color: white;
+                position: relative;
+			}
+			#north{
+				position: absolute;
+				top: 0;
+				left: 200px;
+
+			}
+			#south{
+				position: absolute;
+				bottom: 0;
+				left: 200px;
+                transition-delay: 3s;
+			}
+			#west{
+				position: absolute;
+				left: 0;
+				top: 200px;
+                transition-delay: 2s;
+			}
+			#east{
+				position: absolute;
+				right: 0;
+				top: 200px;
+                transition-delay: 1s;
+			}
+			#compass:hover .move1{
+				transition-duration: 3s;
+				transform: translate(0px, 200px);
+			 	border-radius: 100%;
+				border: 2px solid red;
+			}
+			#compass:hover .move2{
+				transform: translate(0px, -200px);
+				transition-duration: 3s;
+				border-radius: 100%;
+				border: 2px solid red;
+			}
+
+			#compass:hover .move3{
+				transition-duration: 3s;
+				transform: translate(200px, 0px);
+				border-radius: 100%;
+				border: 2px solid red;
+			}
+			#compass:hover .move4{
+				transition-duration: 3s;
+				transform: translate(-200px, 0px);
+				border-radius: 100%;
+				border: 2px solid red;
+			}
+            #div45:hover{
+                transform: translate(200px, 200px);
+                transition-duration: 3s;
+            }
+
+		</style>
+	</head>
+	<body>
+		<section>
+			<h2>Hover Example</h2>
+			<div class="change">
+				<p>This is just a text</p>
+			</div>
+		</section>
+		<br>
+
+		<section>
+			<h2>Second</h2>
+			<div id="father" class="blackbox">
+				<div id="son">
+					<p>This is just a text</p>
+				</div>
+			</div>
+			<br>
+		</section>
+		<section>
+			<h2>Visited Links</h2>
+			<a href="https://www.google.it">Google</a>
+			<a href="https://www.wikipedia.org">Wikipedia</a>
+		</section>
+		<br>
+		<br>
+		<br>
+		<section>
+			<h2>Transformation Examples</h2>
+			<br>
+			<br>
+			<br>
+			<div id="brother1">
+
+			</div>
+			<div id="brother2">
+			</div>
+		</section>
+		<br>
+		<br>
+		<br>
+
+		<section>
+			<h2 style="clear: left">Scaling</h2>
+			<div id="div1">
+				<p>Some text blalblablabla</p>
+			</div>
+			<br>
+			<div id="div2">
+				<p>Some text blalblablabla</p>
+			</div>
+		</section>
+		<br>
+		<br>
+		<section>
+			<h2>Transition property</h2>
+			<div id="div3">
+			</div>
+		</section>
+		<br>
+		<br>
+		<br>
+		<section>
+			<div id="compass" class="blackbox">
+				<div id="north" class="comun move1"></div>
+				<div id="south" class="comun move2"></div>
+				<div id="west" class="comun move3"></div>
+				<div id="east" class="comun move4"></div>
+			</div>
+		</section>
+		<section>
+            <div id="div45">
+                <p>jdjsdjsdjsjdsjdksd</p>
+            </div>
+        </section>
+	</body>
+</html>
